@@ -1,11 +1,11 @@
 # navjotgraphics
 
-A six-page portfolio inspired by GOATS' editorial typography, generous spacing, grey/pink palette and motion language. Original navjotgraphics branding and hero artwork.
+A seven-page portfolio inspired by GOATS' editorial typography, generous spacing, grey/pink palette and motion language. Original navjotgraphics branding and hero artwork.
 
 ## Contents
 
 - Home, Work, About, Contact
-- Individual pages for PJ Glass and PNJ Bespoke
+- Individual pages for PJ Glass, PNJ Bespoke and Puramilk Health
 - Accessible full-screen menu, work grid/list switcher, intersection-based scroll reveals, reduced-motion support
 - Responsive layouts and local optimised images
 
@@ -19,11 +19,12 @@ Project text is a starting draft based on the supplied project context. Review c
 
 - Chrome n hero: original AI-generated artwork for this portfolio.
 - PJ Glass website hero: https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1920&auto=format&fit=crop&q=80
+- Puramilk Health website hero: https://puramilkhealth.com/beautiful-green-farm-with-cows-pastoral-landscape.jpg
 - PNJ Bespoke website hero: https://images.pexels.com/photos/7031583/pexels-photo-7031583.jpeg?auto=compress&cs=tinysrgb&w=1800
 
 ## Validation
 
-JavaScript syntax checked with `node --check dist/app.js`. All internal routes and local image references checked across six pages. No browser visual QA performed: managed Sites preview does not support plain static assets in this environment.
+JavaScript syntax checked with `node --check dist/app.js`. All internal routes and local image references checked across seven pages. No browser visual QA performed: managed Sites preview does not support plain static assets in this environment.
 
 ## Deploy on Vercel
 
