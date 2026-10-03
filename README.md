@@ -17,9 +17,9 @@ Project explanations are based on the supplied project context and public projec
 
 ## Assets
 
-- PJ Glass: actual accessories ecommerce screenshot from https://pj-glass.co.uk/accessories, showing filters, prices and add-to-cart buttons.
+- PJ Glass: AI-generated conceptual accessories composition based on the shop screenshot, with a small shopping card.
 - Chrome n hero: original AI-generated artwork for this portfolio.
-- PNJ Bespoke: kitchen cabinetry image from https://pnjbespoke.co.uk/assets/kitchen-hero-JaB9Sjkl.jpg
+- PNJ Bespoke: timber library cabinetry photograph used on the PNJ Bespoke website: https://pnjbespoke.co.uk/assets/library-DOlvtZOT.jpg
 - Puramilk Health: AI-edited product composition based on the owner-supplied branded dairy artwork (milk, paneer, ghee and butter).
 - Joinery Studio: original AI-generated illustrative 3D cabinetry concept; visibly labelled as an illustration on its project page, not an app screenshot.
 
