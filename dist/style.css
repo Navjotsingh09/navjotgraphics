@@ -20,3 +20,9 @@
 .project-main-image[data-project="puramilk-health"]{background:#5c554d}.project-main-image[data-project="puramilk-health"] img{object-fit:contain}
 
 .project-visual[data-project="puramilk-health"]{background:#5c554d}.project-visual[data-project="puramilk-health"] img{object-fit:contain}
+
+/* Ecommerce screenshot stays complete; dairy artwork fills its frame. */
+[data-project="pj-glass"]{background:#f5f6f8}[data-project="pj-glass"] img{object-fit:contain;filter:none}[data-project="pj-glass"]::after{inset:80% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+[data-project="puramilk-health"]{background:#f7f8f3}.project-visual[data-project="puramilk-health"] img,.project-main-image[data-project="puramilk-health"] img{object-fit:cover}
+
+[data-project="pj-glass"] img{height:85%}[data-project="pj-glass"]::after{display:none}[data-project="pj-glass"] .project-wordmark{color:var(--ink);font-size:30px;bottom:12px}[data-project="pj-glass"]>span{color:var(--ink);font-size:52px;bottom:24px}.project-main-image[data-project="puramilk-health"],.project-visual[data-project="puramilk-health"]{background:#f7f8f3}

@@ -17,10 +17,10 @@ Project explanations are based on the supplied project context and public projec
 
 ## Assets
 
-- PJ Glass: actual glass shower installation from https://pj-glass.co.uk/images/instagram/DSUV2rECPrt.jpg (native 640px).
+- PJ Glass: actual accessories ecommerce screenshot from https://pj-glass.co.uk/accessories, showing filters, prices and add-to-cart buttons.
 - Chrome n hero: original AI-generated artwork for this portfolio.
 - PNJ Bespoke: kitchen cabinetry image from https://pnjbespoke.co.uk/assets/kitchen-hero-JaB9Sjkl.jpg
-- Puramilk Health: milk bottle product image from https://puramilkhealth.com/fresh-cow-milk-in-glass-bottle.jpg
+- Puramilk Health: AI-edited product composition based on the owner-supplied branded dairy artwork (milk, paneer, ghee and butter).
 - Joinery Studio: original AI-generated illustrative 3D cabinetry concept; visibly labelled as an illustration on its project page, not an app screenshot.
 
 ## Validation
