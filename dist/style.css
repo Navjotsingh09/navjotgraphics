@@ -35,3 +35,7 @@
 
 /* Small accent text must keep AA contrast against the grey page. */
 .skill-number,.footer-bottom>.brand{color:#c60051}
+
+/* Match PNJ Bespoke's edge-to-edge project imagery. */
+.project-main-image[data-project="pj-glass"] img,.project-main-image[data-project="puramilk-health"] img,.project-main-image[data-project="joinery-studio"] img{width:100%;height:100%;object-fit:cover;object-position:center}
+.project-main-image[data-project="pj-glass"] img{object-position:center 25%}
