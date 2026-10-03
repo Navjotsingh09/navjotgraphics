@@ -5,11 +5,11 @@ A eight-page portfolio inspired by GOATS' editorial typography, generous spacing
 ## Contents
 
 - Home, Work, About, Contact
-- Individual pages for PJ Glass, PNJ Bespoke, Puramilk Health and Joinery Studio
+- Individual pages for PJ Glass, PNJ Bespoke, Puramilk Health and Joinery Studio, with project purpose, audience, challenge, design approach and visitor journey
 - Accessible full-screen menu, work grid/list switcher, intersection-based scroll reveals, reduced-motion support
 - Responsive layouts and local optimised images
 
-`dist/` is the published static site. `build.py` regenerates page markup; shared styling and interactions are `dist/style.css` and `dist/app.js`.
+`dist/` is the published static site. `build.py` regenerates page markup; `project-stories.json` holds the detailed project explanations; shared styling and interactions are `dist/style.css` and `dist/app.js`.
 
 ## Content and launch work
 

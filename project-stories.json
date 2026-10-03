@@ -1,0 +1,62 @@
+{
+  "pj-glass": {
+    "overview": "PJ Glass is a website for a specialist glazing business. It brings product discovery, architectural inspiration and enquiries into one place, helping visitors understand the range before choosing a product or discussing a bespoke installation.",
+    "audience": "The experience serves homeowners, interior designers and people planning building projects. Some arrive knowing the glass product they need; others need examples and explanations before they can make a decision.",
+    "challenge": "Glazing covers many different applications, from balustrades and splashbacks to mirrors and shower screens. The challenge is to make that variety easy to navigate while giving more technical information a clear place, without overwhelming someone at the start of a project.",
+    "decisions": [
+      "Product categories provide the main route into the collection. Architectural imagery gives visitors a sense of how glass works in a finished space, while product and glass-technology information supports a more detailed comparison.",
+      "The enquiry routes sit alongside the browsing experience. Visitors can explore the shop, look at project examples or move towards a quote, depending on how much they already know about their requirements."
+    ],
+    "steps": [
+      {"title": "Find the right category", "text": "Start with the intended use, such as a balcony, staircase, kitchen or bathroom, and explore the relevant glass products."},
+      {"title": "Understand the options", "text": "Use collection imagery, project examples and explanations of glass types to narrow down the choices."},
+      {"title": "Take the next step", "text": "Continue into the shop or contact the business to discuss measurements, specification and a bespoke project."}
+    ],
+    "purpose": "The aim is to help visitors connect a design idea with a suitable glazing product and arrive at an enquiry with a clearer understanding of what they need."
+  },
+  "pnj-bespoke": {
+    "overview": "PNJ Bespoke presents made-to-measure joinery for three defining parts of the home: staircases, kitchens and fitted bedrooms. The website introduces the services, explains the business's approach and gives homeowners a route to start a project.",
+    "audience": "It is designed around homeowners considering a renovation or a bespoke interior. They need to understand both the visual possibilities and how the work can respond to the dimensions, storage needs and character of their home.",
+    "challenge": "Bespoke joinery is not a standard product chosen from a shelf. The website needs to communicate craftsmanship and design possibilities while making the service understandable to someone who may never have commissioned bespoke work before.",
+    "decisions": [
+      "The structure gives staircases a prominent place, with kitchens and fitted bedrooms as clear companion services. Each area has its own explanation, so visitors can follow the space they want to improve rather than work through an undifferentiated list of services.",
+      "Imagery and concise copy work together to explain proportion, materials and practical use. The process content then connects the inspiration to a project journey, from discussing the home through design, making and installation."
+    ],
+    "steps": [
+      {"title": "Choose the space", "text": "Explore the staircase, kitchen or fitted-bedroom service that matches the project."},
+      {"title": "Explore the approach", "text": "Read how the joinery is considered around the home, everyday routines, materials and available space."},
+      {"title": "Start a conversation", "text": "Use the project enquiry route to explain the property, location and changes the homeowner has in mind."}
+    ],
+    "purpose": "The aim is to turn visual interest into a useful project conversation, helping homeowners describe their needs and understand what a bespoke service involves."
+  },
+  "puramilk-health": {
+    "overview": "Puramilk Health is a dairy website that introduces the brand and its milk and ghee range. It brings product information, delivery coverage, subscription plans and booking entry points together for customers arranging regular deliveries.",
+    "audience": "The main audience is households in Jalandhar looking for dairy delivery. The site also distinguishes the wider shipping option for ghee, so customers can understand which products are available in their area.",
+    "challenge": "A recurring delivery involves more decisions than choosing a product. Customers also need to understand quantity, frequency, delivery arrangements and the differences between plans before starting a booking.",
+    "decisions": [
+      "The product range is presented alongside pricing and availability information. Delivery explanations and frequently asked questions support the decision, while the brand story gives context without replacing practical ordering details.",
+      "Daily, alternate-day and custom subscription options give customers a way to compare schedules. The quick-booking entry point starts with a product and a preferred date, keeping the first step focused."
+    ],
+    "steps": [
+      {"title": "Explore the range", "text": "Compare the milk options and ghee, checking the information and availability shown for each product."},
+      {"title": "Choose a routine", "text": "Review the subscription schedules and delivery information to find an option that fits the household."},
+      {"title": "Begin the booking", "text": "Select a product and preferred date, then continue towards the fuller booking details."}
+    ],
+    "purpose": "The aim is to make regular dairy delivery easier to understand, with product choice, service coverage and scheduling explained before customers begin a booking."
+  },
+  "joinery-studio": {
+    "overview": "Joinery Studio is an interactive planning app for kitchens, fitted bedrooms and stairs. It is intended to support a showroom conversation: turn an idea into a visual layout, adjust the design and discuss it with the customer.",
+    "audience": "The audience is joinery designers and showroom staff working with customers. The workspace supports early design exploration and communication; it is not presented as a replacement for manufacturing drawings or production approval.",
+    "challenge": "A design tool has to connect visual changes with meaningful dimensions. It also needs to guide users into the right type of space, so a kitchen, bedroom and staircase do not all begin with the same generic setup.",
+    "decisions": [
+      "The opening journey uses Space, Layout and Room steps. Kitchen, Bedroom and Stairs are visible choices from the start, giving the user a recognisable route into the task before entering the design workspace.",
+      "The application combines a millimetre-based geometry model with component dimensions, materials and different views. Its Next.js and TypeScript codebase also includes undo and redo, JSON backups, revision snapshots and drawing export. These support iteration rather than treating the first layout as a final answer."
+    ],
+    "steps": [
+      {"title": "Start with a real space", "text": "Choose Kitchen, Bedroom or Stairs, then work through the layout and room setup."},
+      {"title": "Develop the design", "text": "Arrange the joinery components and adjust dimensions and materials, using the available views to inspect the layout."},
+      {"title": "Review and share", "text": "Use revisions and export tools to support a design discussion and retain a record of the proposed layout."}
+    ],
+    "purpose": "The goal is a practical conversation tool: help the designer and customer compare ideas visually, understand the proposed space and agree what needs further development."
+  }
+}
