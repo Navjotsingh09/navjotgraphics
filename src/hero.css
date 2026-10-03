@@ -6,3 +6,5 @@ body{font-family:Inter,Arial,sans-serif;background:var(--bg)}.brand{font-family:
 @media(prefers-reduced-motion:reduce){.marquee-track,.curve-lines i{animation:none}.curve-lines{display:none}.hero-primary{transition:none}.marquee{overflow:auto;mask-image:none}.marquee-track{width:auto}.marquee-group:not(:first-child){display:none}.marquee-group{flex-wrap:wrap}.skills-ticker{height:auto}.menu{transition:none}}
 
 .header{background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-radius:0 0 20px 20px}.menu-button:hover{background:#252525}.menu-close{font-family:Inter,sans-serif}.intro .pink,.section-heading .pink,.capability-grid .pink,.page-heading .pink,.project-heading .pink,.footer-cta .pink{color:var(--ink)}
+
+.menu-button{flex-direction:row;justify-content:center}.menu-icon svg{display:block}
