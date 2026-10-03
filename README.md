@@ -32,3 +32,5 @@ JavaScript syntax checked with `node --check dist/app.js`. All internal routes a
 Import this GitHub repository. Keep the project root at the repository root and use the Other framework preset. The included `vercel.json` serves the committed `dist/` folder directly, with no dependency installation or build step. No environment variables are required.
 
 After editing page content in `build.py`, regenerate it with `python3 build.py` and commit the resulting HTML. Styling and browser interactions live in `dist/style.css` and `dist/app.js`.
+
+PNJ Bespoke cover now uses three real photographs in a responsive composition: kitchen (PNJ website https://pnjbespoke.co.uk/assets/kitchen-hero-JaB9Sjkl.jpg), bedroom (Aleksandra Dementeva, Unsplash https://unsplash.com/photos/modern-bedroom-with-white-built-in-wardrobe-and-bed-VKcAq1_PlYY), and staircase (Pexels https://images.pexels.com/photos/7031583/pexels-photo-7031583.jpeg). These represent the service categories rather than claiming that every photograph depicts a completed PNJ installation.
