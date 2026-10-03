@@ -1,0 +1,10 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { ChevronUp } from 'lucide-react';
+import './hero.css';
+const skills=['UI / UX design','Web development','Digital products','WordPress & Webflow','AI-assisted development'];
+const projects=['PJ Glass','PNJ Bespoke','Puramilk Health','Joinery Studio'];
+function Marquee({items,className=''}){return <div className={'marquee '+className}><div className="marquee-track">{Array.from({length:4},(_,i)=><div className="marquee-group" key={i} aria-hidden={i>0?true:undefined}>{items.map(t=><span key={t}>{t}</span>)}</div>)}</div></div>}
+function Hero(){return <><section className="subscription-hero"><div className="curve-lines curve-left" aria-hidden="true">{Array.from({length:20},(_,i)=><i key={i} style={{width:60+i*10,'--line-step':i*10+'px',animationDelay:i*.25+'s'}}/>)}</div><div className="curve-lines curve-right" aria-hidden="true">{Array.from({length:20},(_,i)=><i key={i} style={{width:60+i*10,'--line-step':i*10+'px',animationDelay:i*.25+'s'}}/>)}</div><div className="hero-content"><Marquee items={skills} className="skills-ticker"/><p className="hero-kicker">Navjot Singh · Designer & developer</p><h1>Digital design,<br/><em>thoughtfully</em><br/>built.</h1><p className="subscription-subtitle">I turn ideas into clear websites and useful digital experiences. From the first design to the final build.</p><div className="subscription-actions"><a className="hero-primary" href="/work/">View my work</a><a className="hero-chat" href="/contact/"><span className="nav-monogram" aria-hidden="true">n.</span><span><strong>Let’s talk about your project</strong><small>Start a conversation</small></span></a></div></div><div className="hero-bottom-blur" aria-hidden="true"/></section><section className="selected-strip" aria-label="Selected projects"><p>Selected projects</p><Marquee items={projects} className="projects-ticker"/></section></>}
+const hero=document.querySelector('#portfolio-hero');if(hero)createRoot(hero).render(<Hero/>);
+const icon=document.querySelector('.menu-icon');if(icon)createRoot(icon).render(<ChevronUp size={16} aria-hidden="true"/>);
