@@ -44,3 +44,11 @@ Desktop behavior: single-click selects, double-click/Enter opens (single tap on 
 XP visual assets in `dist/assets/xp/` were retrieved from https://github.com/Cyanoxide/react-xp/tree/main/frontend/public (Bliss, system icons, skateboard account tile and Start-button sprite). Original Microsoft artwork remains owned by its respective rights holders; NavOS is an independent portfolio recreation. The HTML/CSS/JavaScript implementation here is original. It is a portfolio desktop, not an operating-system emulator.
 
 Verification: generated static pages, JavaScript syntax and whitespace checks pass. Browser visual verification is still required: internal `terminal.local` preview was blocked by the cloud browser and the connected Vercel account could not access this team's protected previews.
+
+### Temporary guests and wallpapers
+
+User Accounts is available from the welcome screen and Start menu. Visitors can create up to four guest profiles with a name and one of three account pictures, then remove them without affecting other visitors. Profiles and per-profile background settings use `sessionStorage` in the current browser tab; no server account, password, or signup is involved. They persist through refresh and Log Off within that session. Browser session recovery may restore session storage after reopening a tab.
+
+Display Properties (Start menu or desktop right-click → Properties) offers Bliss, Autumn, Red Moon Desert, Follow and a blue background. Browse accepts local JPG, PNG, WebP or GIF files up to 8 MB, decodes and resizes them locally to a maximum of 1600 pixels, and stores the wallpaper only in that tab's session. Animated files use a still frame. Stretch, Fill and Fit are supported, with a preview and Apply/OK/Cancel controls. A storage error leaves the change usable for the current page and reports that it cannot survive refresh.
+
+Automated DOM behavior checks passed for creation, literal rendering of user names, duplicate names, wallpaper Apply/Cancel, profile isolation, reload/session reset and removing the active guest. The full browser visual check remains blocked as described above.
