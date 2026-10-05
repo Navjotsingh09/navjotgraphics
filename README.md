@@ -52,3 +52,11 @@ User Accounts is available from the welcome screen and Start menu. Visitors can 
 Display Properties (Start menu or desktop right-click → Properties) offers Bliss, Autumn, Red Moon Desert, Follow and a blue background. Browse accepts local JPG, PNG, WebP or GIF files up to 8 MB, decodes and resizes them locally to a maximum of 1600 pixels, and stores the wallpaper only in that tab's session. Animated files use a still frame. Stretch, Fill and Fit are supported, with a preview and Apply/OK/Cancel controls. A storage error leaves the change usable for the current page and reports that it cannot survive refresh.
 
 Automated DOM behavior checks passed for creation, literal rendering of user names, duplicate names, wallpaper Apply/Cancel, profile isolation, reload/session reset and removing the active guest. The full browser visual check remains blocked as described above.
+
+### Complete desktop interactions
+
+The desktop now supports dragging shortcut icons, arranging/resetting icon positions, deleting portfolio shortcuts to Recycle Bin and restoring them. Keyboard controls include arrow keys between desktop icons, Enter to open, Delete for selected shortcuts, Ctrl+Escape for Start and Alt+Tab between windows. Explorer has per-window Back/Forward/Up, working File/Edit/View/Favorites/Tools/Help menus, icon/list views and taskbar right-click controls. Show Desktop hides/restores visible windows.
+
+Notepad stores up to 20,000 characters per profile in the current session, supports word wrap, clear/undo-clear, Select All and a local text download. Calculator supports standard arithmetic, percentage, reciprocal, decimal input and keyboard entry. Run opens known portfolio folders and NavOS programs only. Task Manager lists real open NavOS windows with switch/end controls. Startup/shutdown/recycle sounds and volume/mute settings use local XP sound files, with browser audio restrictions respected. Original audio, Notepad and Run artwork are sourced from the same React XP public asset collection credited above.
+
+DOM verification scripts are in `tests/`. For a static-site checkout with Node.js, install `jsdom` locally (`npm install --no-save --ignore-scripts jsdom`), then run `node tests/navos-session.cjs` and `node tests/navos-desktop.cjs`. These test interaction behavior, not browser rendering.
