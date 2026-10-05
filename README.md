@@ -34,3 +34,13 @@ Import this GitHub repository. Keep the project root at the repository root and 
 After editing page content in `build.py`, regenerate it with `python3 build.py` and commit the resulting HTML. Styling and browser interactions live in `dist/style.css` and `dist/app.js`.
 
 PNJ Bespoke cover now uses three real photographs in a responsive composition: kitchen (PNJ website https://pnjbespoke.co.uk/assets/kitchen-hero-JaB9Sjkl.jpg), bedroom (Aleksandra Dementeva, Unsplash https://unsplash.com/photos/modern-bedroom-with-white-built-in-wardrobe-and-bed-VKcAq1_PlYY), and staircase (Pexels https://images.pexels.com/photos/7031583/pexels-photo-7031583.jpeg). These represent the service categories rather than claiming that every photograph depicts a completed PNJ installation.
+
+### NavOS design branch
+
+The `design/windows-xp` branch keeps the existing portfolio available at `/simple/` and adds a 2001 Luna-style welcome screen and desktop at `/`. No password or account is collected. Four project folders, About, Skills and Contact retain the approved portfolio content.
+
+Desktop behavior: single-click selects, double-click/Enter opens (single tap on touch); title bars drag and double-click maximize; task buttons minimize/restore; minimize activates the next visible window; Back maintains per-window folder history; Up opens My Computer; Escape dismisses menus; Log Off returns to the two-profile screen. Display Properties switches the wallpaper. Date, volume and shutdown controls open local dialogs. Volume is visual only because no audio plays.
+
+XP visual assets in `dist/assets/xp/` were retrieved from https://github.com/Cyanoxide/react-xp/tree/main/frontend/public (Bliss, system icons, skateboard account tile and Start-button sprite). Original Microsoft artwork remains owned by its respective rights holders; NavOS is an independent portfolio recreation. The HTML/CSS/JavaScript implementation here is original. It is a portfolio desktop, not an operating-system emulator.
+
+Verification: generated static pages, JavaScript syntax and whitespace checks pass. Browser visual verification is still required: internal `terminal.local` preview was blocked by the cloud browser and the connected Vercel account could not access this team's protected previews.
