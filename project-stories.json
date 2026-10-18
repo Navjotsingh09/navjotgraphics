@@ -8,9 +8,18 @@
       "The enquiry routes sit alongside the browsing experience. Visitors can explore the shop, look at project examples or move towards a quote, depending on how much they already know about their requirements."
     ],
     "steps": [
-      {"title": "Find the right category", "text": "Start with the intended use, such as a balcony, staircase, kitchen or bathroom, and explore the relevant glass products."},
-      {"title": "Understand the options", "text": "Use collection imagery, project examples and explanations of glass types to narrow down the choices."},
-      {"title": "Take the next step", "text": "Continue into the shop or contact the business to discuss measurements, specification and a bespoke project."}
+      {
+        "title": "Find the right category",
+        "text": "Start with the intended use, such as a balcony, staircase, kitchen or bathroom, and explore the relevant glass products."
+      },
+      {
+        "title": "Understand the options",
+        "text": "Use collection imagery, project examples and explanations of glass types to narrow down the choices."
+      },
+      {
+        "title": "Take the next step",
+        "text": "Continue into the shop or contact the business to discuss measurements, specification and a bespoke project."
+      }
     ],
     "purpose": "The aim is to help visitors connect a design idea with a suitable glazing product and arrive at an enquiry with a clearer understanding of what they need."
   },
@@ -23,9 +32,18 @@
       "Imagery and concise copy work together to explain proportion, materials and practical use. The process content then connects the inspiration to a project journey, from discussing the home through design, making and installation."
     ],
     "steps": [
-      {"title": "Choose the space", "text": "Explore the staircase, kitchen or fitted-bedroom service that matches the project."},
-      {"title": "Explore the approach", "text": "Read how the joinery is considered around the home, everyday routines, materials and available space."},
-      {"title": "Start a conversation", "text": "Use the project enquiry route to explain the property, location and changes the homeowner has in mind."}
+      {
+        "title": "Choose the space",
+        "text": "Explore the staircase, kitchen or fitted-bedroom service that matches the project."
+      },
+      {
+        "title": "Explore the approach",
+        "text": "Read how the joinery is considered around the home, everyday routines, materials and available space."
+      },
+      {
+        "title": "Start a conversation",
+        "text": "Use the project enquiry route to explain the property, location and changes the homeowner has in mind."
+      }
     ],
     "purpose": "The aim is to turn visual interest into a useful project conversation, helping homeowners describe their needs and understand what a bespoke service involves."
   },
@@ -38,9 +56,18 @@
       "Daily, alternate-day and custom subscription options give customers a way to compare schedules. The quick-booking entry point starts with a product and a preferred date, keeping the first step focused."
     ],
     "steps": [
-      {"title": "Explore the range", "text": "Compare the milk options and ghee, checking the information and availability shown for each product."},
-      {"title": "Choose a routine", "text": "Review the subscription schedules and delivery information to find an option that fits the household."},
-      {"title": "Begin the booking", "text": "Select a product and preferred date, then continue towards the fuller booking details."}
+      {
+        "title": "Explore the range",
+        "text": "Compare the milk options and ghee, checking the information and availability shown for each product."
+      },
+      {
+        "title": "Choose a routine",
+        "text": "Review the subscription schedules and delivery information to find an option that fits the household."
+      },
+      {
+        "title": "Begin the booking",
+        "text": "Select a product and preferred date, then continue towards the fuller booking details."
+      }
     ],
     "purpose": "The aim is to make regular dairy delivery easier to understand, with product choice, service coverage and scheduling explained before customers begin a booking."
   },
@@ -53,10 +80,44 @@
       "The application combines a millimetre-based geometry model with component dimensions, materials and different views. Its Next.js and TypeScript codebase also includes undo and redo, JSON backups, revision snapshots and drawing export. These support iteration rather than treating the first layout as a final answer."
     ],
     "steps": [
-      {"title": "Start with a real space", "text": "Choose Kitchen, Bedroom or Stairs, then work through the layout and room setup."},
-      {"title": "Develop the design", "text": "Arrange the joinery components and adjust dimensions and materials, using the available views to inspect the layout."},
-      {"title": "Review and share", "text": "Use revisions and export tools to support a design discussion and retain a record of the proposed layout."}
+      {
+        "title": "Start with a real space",
+        "text": "Choose Kitchen, Bedroom or Stairs, then work through the layout and room setup."
+      },
+      {
+        "title": "Develop the design",
+        "text": "Arrange the joinery components and adjust dimensions and materials, using the available views to inspect the layout."
+      },
+      {
+        "title": "Review and share",
+        "text": "Use revisions and export tools to support a design discussion and retain a record of the proposed layout."
+      }
     ],
     "purpose": "The goal is a practical conversation tool: help the designer and customer compare ideas visually, understand the proposed space and agree what needs further development."
+  },
+  "ai-nutrition": {
+    "overview": "This project is an AI-powered nutrition app and landing page designed to help users build healthier eating habits through personalised recommendations and a clear, engaging digital experience.",
+    "audience": "The experience is designed for people looking for approachable nutrition guidance and a simple way to understand personalised suggestions across mobile and web.",
+    "challenge": "Present AI-powered nutrition guidance in a way that feels simple, trustworthy and easy to use: explain recommendations clearly, guide healthier choices, balance functionality with a friendly identity, and maintain consistency across mobile and web.",
+    "decisions": [
+      "A clean, vibrant interface combines modern UI patterns with organic visual elements. Green, yellow and natural food imagery create a friendly health and wellness direction.",
+      "The experience is built around clarity, approachable health communication and a simple user flow. Clear visual hierarchy and readable content help users understand the product and take action without feeling overwhelmed.",
+      "A mobile-first product experience connects personalised recommendation screens with a conversion-focused landing page, supported by a reusable visual system and UI components."
+    ],
+    "steps": [
+      {
+        "title": "Understand the product",
+        "text": "A clear landing page introduces the nutrition experience, explains its purpose and gives users an obvious next step."
+      },
+      {
+        "title": "Explore personalised guidance",
+        "text": "Mobile screens and AI recommendation flows organise nutrition information around an approachable, readable interface."
+      },
+      {
+        "title": "Move from interest to action",
+        "text": "Consistent calls to action and responsive layouts connect the product story across mobile and web."
+      }
+    ],
+    "purpose": "The design balances branding and usability, pairing a friendly health direction with clear product storytelling."
   }
 }
