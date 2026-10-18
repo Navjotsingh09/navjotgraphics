@@ -1,3 +1,13 @@
+# navjotgraphics — Cobalt editorial portfolio
+
+Current public design: warm paper, cobalt blue, editorial layouts and responsive halftone photography. Home, Work, About, Contact and four project case studies share the same visual system. The previous XP desktop is preserved at `/navos/`.
+
+Build with `python build.py`. JavaScript interactions are in `dist/app.js`; the halftone renderer draws original images as variable-radius blue dots and redraws after resize. Hover over a project image to see the original colour. The contact form downloads a brief and does not send an enquiry.
+
+Validation: generated HTML routes and local assets resolve; JavaScript syntax and whitespace checks pass. Browser and physical-device visual verification remain outstanding in this environment.
+
+---
+
 # navjotgraphics
 
 A eight-page portfolio inspired by GOATS' editorial typography, generous spacing, grey/pink palette and motion language. Original navjotgraphics branding and hero artwork.
