@@ -144,5 +144,30 @@
       }
     ],
     "purpose": "The result is an 18-page reference that connects brand thinking with practical identity use, helping collaborators apply Nuelo consistently."
+  },
+  "la-maison-clicquot": {
+    "overview": "La Maison Clicquot is a nine-slide luxury activation proposal presented by Nuelo Colab. It introduces an invite-only countryside mansion experience centred on Veuve Clicquot, with an emphasis on hospitality, cultural connections and planned content creation.",
+    "audience": "The deck is written for brand and hospitality stakeholders assessing the proposed concept, its intended audience and its potential value. This case study focuses on communicating the proposal through presentation design.",
+    "challenge": "Turn an experiential idea into a persuasive, easy-to-follow presentation. The reader needs to understand what the activation is, why it is being proposed, who it is designed to reach and what the intended outputs could be.",
+    "decisions": [
+      "The narrative moves from overview and core concept into strategy, guest profile, setting, experience highlights, proposed deliverables and next steps. That sequence connects the creative idea with practical points for discussion.",
+      "Warm cream backgrounds, champagne-yellow accents and expressive serif headings establish an editorial luxury direction. Large imagery conveys atmosphere, while structured text and generous spacing make the proposition easier to scan.",
+      "The proposed 60–80-person guest profile and Midlands or Oxfordshire venue direction make the concept concrete. Proposed content deliverables and relationship-building opportunities connect the creative idea with stakeholder priorities."
+    ],
+    "steps": [
+      {
+        "title": "Introduce the experience",
+        "text": "Establish the private mansion concept and the atmosphere of the proposed activation."
+      },
+      {
+        "title": "Build the rationale",
+        "text": "Explain the strategic intent, guest profile, venue direction and planned experience so stakeholders can evaluate the idea."
+      },
+      {
+        "title": "Define a next step",
+        "text": "Outline proposed content and relationship-building outputs, then invite discussion around property shortlists, moodboards and invitations."
+      }
+    ],
+    "purpose": "The design gives the proposal a coherent story, connecting a luxury experience concept with the information a stakeholder needs to consider it."
   }
 }
