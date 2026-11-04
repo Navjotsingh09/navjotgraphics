@@ -119,5 +119,30 @@
       }
     ],
     "purpose": "The design balances branding and usability, pairing a friendly health direction with clear product storytelling."
+  },
+  "nuelo-colab": {
+    "overview": "Nuelo.Colab is a brand identity and guidelines project for a marketing and brand management company working with luxury brands across music, entertainment, hospitality, fashion and sport. The 2024 document turns the brand’s positioning into a shared visual and verbal reference.",
+    "audience": "The guidelines support designers, collaborators and teams applying the identity across presentations, digital communications and social media.",
+    "challenge": "Express a sophisticated, innovative and forward-thinking personality while keeping the identity adaptable and consistent. The system needs clear rules for logo formats, colour, type and communication so that different applications still feel like the same brand.",
+    "decisions": [
+      "The identity brings together a distinctive symbol and a refined Nuelo wordmark. Vertical, horizontal and icon treatments give the brand options across formats without losing recognition.",
+      "A restrained brown (#92725B) and blue (#446389) palette anchors the visual system. Open Sauce typography, with light, regular and bold weights, creates a readable hierarchy across headings, body text and secondary information.",
+      "Practical guidance covers minimum size, clear space, approved colours and logo misuse. Layout principles use alignment, white space and contrast to organise information, while voice guidance calls for sophisticated, accessible, informative and engaging communication."
+    ],
+    "steps": [
+      {
+        "title": "Establish the brand foundations",
+        "text": "Define the essence, values and personality: collaboration, excellence, creativity and authenticity support the brand’s luxury-facing position."
+      },
+      {
+        "title": "Build a consistent identity system",
+        "text": "Connect the logo variations with approved colours, typography and hierarchy, supported by explicit rules for correct use."
+      },
+      {
+        "title": "Apply the brand across touchpoints",
+        "text": "Use the shared visual and verbal guidance for presentations, web and screen layouts, and social branding."
+      }
+    ],
+    "purpose": "The result is an 18-page reference that connects brand thinking with practical identity use, helping collaborators apply Nuelo consistently."
   }
 }
