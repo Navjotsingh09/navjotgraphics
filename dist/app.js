@@ -23,3 +23,6 @@ const form=document.querySelector('#brief-form');form?.addEventListener('submit'
  addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule,{passive:true});
  reduced.addEventListener('change',()=>{if(reduced.matches){generation++;started=false;footer.classList.remove('footer-scroll-sequence');image.src='https://cdn.madeinevolve.com/media/img/sequence/desktop/frame-001.webp'}else start()});
 })();
+
+// Keep footer link labels free of decorative arrows.
+document.querySelectorAll('.footer-reference a').forEach(link=>{for(const node of link.childNodes){if(node.nodeType===Node.TEXT_NODE)node.textContent=node.textContent.replace(/[↗↑→]/g,'').trimEnd()}});
