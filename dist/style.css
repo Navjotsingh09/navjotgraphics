@@ -28,3 +28,15 @@ input[type=checkbox],input[type=radio]{accent-color:#111111}::selection{backgrou
 .footer-reference-tail{position:relative;height:130vw;max-height:1900px;background:#111}
 .footer-reference-lines{position:absolute;inset:50% 2.083333vw 0;background:repeating-linear-gradient(90deg,#181818 0,#181818 1px,transparent 1px,transparent 2.083333vw);mask-image:linear-gradient(180deg,transparent,#000 5%,#000);-webkit-mask-image:linear-gradient(180deg,transparent,#000 5%,#000)}
 @media(max-width:650px){.footer-reference-scene{min-height:620px;padding:80px 18px 30px}.footer-reference-title{font-size:20px;margin:60px auto 100px}.footer-reference-info{grid-template-columns:1fr 1fr;gap:30px 18px;margin-top:0;font-size:11px}.footer-reference-info .footer-reference-label{font-size:9px}.footer-reference-tail{height:130vw}.footer-reference-lines{left:2.083333vw;right:2.083333vw}}
+
+/* Continuous site grid, visible over both light and dark sections. */
+body::after{content:"";position:fixed;inset:0;z-index:5;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0,transparent calc(2.083333vw - 1px),#fff calc(2.083333vw - 1px),#fff 2.083333vw);mix-blend-mode:difference;opacity:.12}
+.footer-reference-image{animation:footer-crowd-drift 18s ease-in-out infinite alternate;transform-origin:50% 60%;will-change:transform}
+.footer-reference-scene{overflow:hidden}
+.footer-reference-title{animation:footer-title-breathe 7s ease-in-out infinite alternate}
+.footer-reference-tail{height:10vw;max-height:160px}
+.footer-reference-lines{display:none}
+@keyframes footer-crowd-drift{from{transform:scale(1.02) translate3d(-.4%,0,0)}to{transform:scale(1.12) translate3d(.4%,-1.5%,0)}}
+@keyframes footer-title-breathe{from{transform:translateY(0)}to{transform:translateY(-8px)}}
+@media(max-width:650px){body::after{background-size:8.333333vw 100%;background-image:linear-gradient(90deg,transparent calc(100% - 1px),#fff calc(100% - 1px))}.footer-reference-tail{height:60px}}
+@media(prefers-reduced-motion:reduce){.footer-reference-image,.footer-reference-title{animation:none;transform:none;will-change:auto}}
