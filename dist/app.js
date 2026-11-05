@@ -10,18 +10,33 @@ const form=document.querySelector('#brief-form');form?.addEventListener('submit'
 (()=>{const ink='#111111',paper='#fafafa';const render=el=>{const images=[...el.querySelectorAll('img')];if(!images.length)return;const width=Math.round(el.clientWidth),height=Math.round(el.clientHeight);if(!width||!height)return;let canvas=el.querySelector('canvas');if(!canvas){canvas=document.createElement('canvas');canvas.setAttribute('aria-hidden','true');el.append(canvas)}canvas.width=width;canvas.height=height;const sample=document.createElement('canvas');sample.width=width;sample.height=height;const ctx=sample.getContext('2d',{willReadFrequently:true});ctx.fillStyle=paper;ctx.fillRect(0,0,width,height);const bounds=el.getBoundingClientRect();images.forEach(img=>{if(!img.complete||!img.naturalWidth)return;const r=img.getBoundingClientRect(),x=r.left-bounds.left-el.clientLeft,y=r.top-bounds.top-el.clientTop,w=r.width,h=r.height,scale=Math.max(w/img.naturalWidth,h/img.naturalHeight),sw=w/scale,sh=h/scale;ctx.drawImage(img,(img.naturalWidth-sw)/2,(img.naturalHeight-sh)/2,sw,sh,x,y,w,h)});const pixels=ctx.getImageData(0,0,width,height).data,out=canvas.getContext('2d');out.fillStyle=paper;out.fillRect(0,0,width,height);out.fillStyle=ink;const step=width<500?3:4;for(let y=1;y<height;y+=step)for(let x=1;x<width;x+=step){const i=(y*width+x)*4,l=(pixels[i]*.2126+pixels[i+1]*.7152+pixels[i+2]*.0722)/255,dark=Math.max(0,Math.min(1,(1-l)*1.35));if(dark<.04)continue;out.beginPath();out.arc(x,y,step*.69*Math.sqrt(dark),0,Math.PI*2);out.fill()}};const elements=[...document.querySelectorAll('.halftone')];elements.forEach(el=>{el.querySelectorAll('img').forEach(img=>{if(!img.complete)img.addEventListener('load',()=>render(el),{once:true})});render(el)});let timer;window.addEventListener('resize',()=>{clearTimeout(timer);timer=setTimeout(()=>elements.forEach(render),180)});})();
 (()=>{const video=document.querySelector('#hero-video'),button=document.querySelector('.hero-video-toggle');if(!video||!button)return;const motion=matchMedia('(prefers-reduced-motion:reduce)');video.muted=true;const update=()=>{button.textContent=video.paused?'Play animation':'Pause animation';button.setAttribute('aria-label',button.textContent)};video.addEventListener('play',update);video.addEventListener('pause',update);button.addEventListener('click',()=>{if(video.paused)video.play().catch(update);else video.pause()});const preference=()=>{if(motion.matches)video.pause();else{video.autoplay=true;video.play().catch(update)}};motion.addEventListener('change',preference);preference();update()})();
 
-/* Scrub the reference's 46 head-rotation frames with footer scroll progress. */
+/* Draw decoded scroll frames onto one persistent surface to avoid image swaps. */
 (()=>{
- const footer=document.querySelector('.footer-reference'),scene=footer?.querySelector('.footer-reference-scene'),image=scene?.querySelector('.footer-reference-image');
- if(!image)return;
+ const footer=document.querySelector('.footer-reference'),scene=footer?.querySelector('.footer-reference-scene'),poster=scene?.querySelector('img.footer-reference-image');
+ if(!poster)return;
  const reduced=matchMedia('(prefers-reduced-motion:reduce)');
- let frames=[],generation=0,wanted=0,drawn=-1,queued=false,started=false;
- const draw=()=>{queued=false;if(reduced.matches)return;const distance=footer.offsetHeight-scene.offsetHeight;const progress=Math.max(0,Math.min(1,-footer.getBoundingClientRect().top/Math.max(1,distance)));wanted=Math.round(progress*45);let nearest=-1;for(let i=0;i<46;i++)if(frames[i]?.naturalWidth&&(nearest<0||Math.abs(i-wanted)<Math.abs(nearest-wanted)))nearest=i;if(nearest>=0&&nearest!==drawn){image.src=frames[nearest].src;image.dataset.frame=String(nearest+1);drawn=nearest}};
+ const canvas=document.createElement('canvas');canvas.className='footer-reference-image footer-sequence-canvas';canvas.setAttribute('aria-hidden','true');canvas.style.visibility='hidden';scene.insertBefore(canvas,poster.nextSibling);
+ const ctx=canvas.getContext('2d',{alpha:false});if(!ctx){canvas.remove();return;}
+ let frames=[],generation=0,drawn=-1,queued=false,started=false,active=false,width=0,height=0;
+ const size=()=>{const ratio=Math.min(devicePixelRatio||1,1.5),w=Math.round(scene.clientWidth*ratio),h=Math.round(scene.clientHeight*ratio);if(w!==width||h!==height){width=canvas.width=w;height=canvas.height=h;drawn=-1}};
+ const draw=()=>{queued=false;if(reduced.matches||!started)return;size();const distance=footer.offsetHeight-scene.offsetHeight,progress=Math.max(0,Math.min(1,-footer.getBoundingClientRect().top/Math.max(1,distance))),wanted=Math.round(progress*45);
+ // Hold the current image until the exact requested frame has decoded.
+ const frame=frames[wanted];if(!frame||wanted===drawn||!width||!height)return;
+ const scale=Math.max(width/frame.naturalWidth,height/frame.naturalHeight),sw=width/scale,sh=height/scale;
+ ctx.drawImage(frame,(frame.naturalWidth-sw)/2,(frame.naturalHeight-sh)/2,sw,sh,0,0,width,height);
+ drawn=wanted;canvas.dataset.frame=String(wanted+1);poster.dataset.frame=String(wanted+1);
+ if(!active){canvas.style.visibility='visible';poster.style.visibility='hidden';active=true}
+ };
  const schedule=()=>{if(!queued){queued=true;requestAnimationFrame(draw)}};
- const start=()=>{if(started||reduced.matches)return;started=true;footer.classList.add('footer-scroll-sequence');const current=++generation;frames=[];drawn=-1;let next=0;const base='https://cdn.madeinevolve.com/media/img/sequence/'+(innerWidth<=650?'mobile':'desktop')+'/frame-';const loadNext=()=>{if(current!==generation||next>=46)return;const i=next++,frame=new Image();frames[i]=frame;frame.onload=()=>{if(current!==generation)return;schedule();loadNext()};frame.onerror=loadNext;frame.src=base+String(i+1).padStart(3,'0')+'.webp'};for(let i=0;i<4;i++)loadNext();schedule()};
- if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){start();observer.disconnect()}},{rootMargin:'1000px'});observer.observe(footer)}else start();
+ const start=()=>{if(started||reduced.matches)return;started=true;footer.classList.add('footer-scroll-sequence');const current=++generation;frames=[];drawn=-1;let next=0;
+ const base='https://cdn.madeinevolve.com/media/img/sequence/'+(innerWidth<=650?'mobile':'desktop')+'/frame-';
+ const loadNext=()=>{if(current!==generation||next>=46)return;const i=next++,frame=new Image();frame.decoding='async';frame.onload=async()=>{try{await frame.decode()}catch{return loadNext()}if(current!==generation)return;frames[i]=frame;schedule();loadNext()};frame.onerror=loadNext;frame.src=base+String(i+1).padStart(3,'0')+'.webp'};
+ for(let i=0;i<4;i++)loadNext();schedule()};
+ // Reserve scroll distance before entering the footer, preventing a layout jump.
+ if(!reduced.matches)footer.classList.add('footer-scroll-sequence');
+ if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){start();observer.disconnect()}},{rootMargin:'1600px'});observer.observe(footer)}else start();
  addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule,{passive:true});
- reduced.addEventListener('change',()=>{if(reduced.matches){generation++;started=false;footer.classList.remove('footer-scroll-sequence');image.src='https://cdn.madeinevolve.com/media/img/sequence/desktop/frame-001.webp'}else start()});
+ reduced.addEventListener('change',()=>{if(reduced.matches){generation++;started=false;active=false;canvas.style.visibility='hidden';poster.style.visibility='';footer.classList.remove('footer-scroll-sequence')}else start()});
 })();
 
 // Keep footer link labels free of decorative arrows.
