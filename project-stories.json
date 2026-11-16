@@ -194,5 +194,30 @@
       }
     ],
     "purpose": "The experience connects straightforward bulk ordering with a clear explanation of materials and a separate path for custom-branded packaging."
+  },
+  "devanhaar": {
+    "overview": "Devanhaar is a UK Sikh charity supporting spiritual growth, education, community relationships and personal development. I independently designed and developed its website and connected digital experiences as an unpaid seva contribution to the charity and the Sangat.",
+    "audience": "The platform serves Sangat, parents, young people, campers, donors, volunteers, educators and programme organisers. It needs to accommodate both public discovery and behind-the-scenes administration across a growing range of initiatives.",
+    "challenge": "A multi-programme charity needs more than a homepage. With twelve initiatives spanning camps, education, sports, family and professional networks, the key challenge is giving each programme room to communicate its purpose while maintaining a coherent platform for registrations, operations and updates.",
+    "decisions": [
+      "I built a unified visual and navigation system that allows visitors to discover programmes while leaving space for initiative-specific content, registration requirements and event announcements.",
+      "I designed and developed registration, volunteer and interest journeys, with programme administration, structured data handling and CSV exports for sevadaars managing participation.",
+      "The platform includes dedicated experiences for projects such as Sikh Family Initiative, Punjab Education Support and Sikh Padel Association, alongside content publishing, donation routes and key community information."
+    ],
+    "steps": [
+      {
+        "title": "Discover a programme",
+        "text": "Explore camps, family experiences, Sikh education, community sport and other initiatives from a unified platform."
+      },
+      {
+        "title": "Get involved",
+        "text": "Follow live event announcements, register or express interest, volunteer, donate and read project-specific information."
+      },
+      {
+        "title": "Support the organisers",
+        "text": "Use programme-specific administrative workflows and data exports to help coordinate activities, enquiries and sign-ups."
+      }
+    ],
+    "purpose": "This is an ongoing personal seva project, designed and developed by me without payment, to support Devanhaar's sevadaars and the wider Sikh community."
   }
 }
