@@ -169,5 +169,30 @@
       }
     ],
     "purpose": "The design gives the proposal a coherent story, connecting a luxury experience concept with the information a stakeholder needs to consider it."
+  },
+  "pacit": {
+    "overview": "Pacit is a Webflow e-commerce experience for sustainable food-service packaging. The site presents sugarcane plates, trays, clamshell containers, cups and other takeaway essentials in bulk quantities for UK customers.",
+    "audience": "The site serves cafés, takeaway operators, food vans, caterers and event organisers who need to compare packaging formats, order products in quantity or enquire about printing their own branding on cups and boxes.",
+    "challenge": "Business buyers need to find the right container or cup quickly, understand pack quantities and prices, and distinguish material choices. The website also needs a separate, clear route for customers seeking custom-printed packaging.",
+    "decisions": [
+      "The homepage leads with practical product categories and featured items, keeping shopping pathways visible before longer explanations of sustainability and materials.",
+      "Product information and category navigation support bulk purchasing, while a dedicated branded-packaging enquiry introduces custom printing without complicating the standard shop journey.",
+      "Material storytelling explains bagasse, the fibre left after sugarcane processing, alongside the wider range of kraft, wooden and foil packaging."
+    ],
+    "steps": [
+      {
+        "title": "Browse by packaging type",
+        "text": "Explore sugarcane plates, compartment trays, food containers and cups from the product catalogue."
+      },
+      {
+        "title": "Review products and quantities",
+        "text": "Compare the listed formats, pack sizes and prices, then continue through the shopping cart and checkout."
+      },
+      {
+        "title": "Enquire about branded packaging",
+        "text": "Use the printing enquiry to request custom cups or takeaway boxes for a café, food van or event."
+      }
+    ],
+    "purpose": "The experience connects straightforward bulk ordering with a clear explanation of materials and a separate path for custom-branded packaging."
   }
 }
